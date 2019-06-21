@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+  <ul class="header">
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a routerLink="/videos" routerLinkActive="active">User details</a></li>
+    <li><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
+  </ul>
+  <!-- <p [@myanimation]='state' (click)="animateme()">I will animate</p> -->
+  <div>
+    <label for="names">name</label>
+    <input type="text" id="names" [(ngModel)]='names'>
+  </div>
+  <button (click)="toggleChild()">Toggle child component</button>
+
+  <router-outlet></router-outlet>
+  <app-footercomponent [name]="names" *ngIf="showcomponent"></app-footercomponent>
